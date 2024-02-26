@@ -115,7 +115,10 @@ class Game {
         this.context.font = "45px sans-serif";
         this.context.fillText(this.score, 5, 45);
 
-        if (this.gameOver) {
+        if (this.score >= 100) {
+            this.context.fillText("You win this time!", 5, 90);
+            this.gameOver = true;
+        } else if (this.gameOver) {
             this.context.fillText("You're done Stacker!", 5, 90);
         }
     }
