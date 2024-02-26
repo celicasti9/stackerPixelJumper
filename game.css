@@ -1,8 +1,28 @@
 body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+ }
+ 
+ #board {
+    background-image: url("images/background.png");
+ }
+ 
+ /*#start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#board {
-    background-image: url("./background.png");
+#start-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
 }

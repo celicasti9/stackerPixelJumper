@@ -14,7 +14,7 @@ class Game {
         this.stackerX = this.boardWidth / 8;
         this.stackerY = this.boardHeight / 2;
         this.stackerImg = new Image();
-        this.stackerImg.src = "./stacker.png";
+        this.stackerImg.src = "images/stacker.png";
 
         this.stacker = {
             x: this.stackerX,
@@ -31,10 +31,10 @@ class Game {
         this.obstacleY = 0;
 
         this.topObstacleImg = new Image();
-        this.topObstacleImg.src = "./topObstacle.png";
+        this.topObstacleImg.src = "images/topObstacle.png";
 
         this.bottomObstacleImg = new Image();
-        this.bottomObstacleImg.src = "./bottomObstacle.png";
+        this.bottomObstacleImg.src = "images/bottomObstacle.png";
 
         // Audio
         this.jumpAudio = document.getElementById("jumpAudio");

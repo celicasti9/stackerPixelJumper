@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="game.css">
 </head>
 <body>
+    <!--<div id="start-screen">
+        <h1>Stacker Pixel Jumper</h1>
+        <button id="start-button">Start Game</button>
+    </div>-->
+    
+      <div class="container mx-auto mt-8">
+        <!---->
+        <!---->
+        
+        <button id="connect-button" class="px-4 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600">Connect Wallet</button>
+      </div>
     <canvas id="board"></canvas>
     <audio id="jumpAudio" src="./jump.mp3"></audio>
     <audio id="collisionAudio" src="./collision.mp3"></audio>
     <audio id="scoreAudio" src="./score.mp3"></audio>
     <script src="game.js"></script>
+    <script src="web3.js"></script>
 </body>
 </html>
