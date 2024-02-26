@@ -21,8 +21,8 @@ class Game {
             y: this.stackerY,
             width: this.stackerWidth,
             height: this.stackerHeight,
-        };   
-        
+        };
+
         // Obstacles
         this.obstacleArray = [];
         this.obstacleWidth = 64;
@@ -52,7 +52,7 @@ class Game {
         // Event Listeners
         this.board.addEventListener("keydown", (e) => this.moveStacker(e));
         this.board.setAttribute("tabindex", 0);
-        this.board.addEventListener("click", () => this.board.focus());
+        this.board.addEventListener("click", () => this.jump());
 
         // Initialize
         this.init();
@@ -182,7 +182,7 @@ class Game {
             }
         }
     }
-    
+
     moveStacker(e) {
         if (this.gameOver) {
             // Restart the game on any key press after game over
@@ -197,6 +197,20 @@ class Game {
             this.jumpAudio.currentTime = 0;
             this.jumpAudio.play();
         }
+    }
+
+    jump() {
+        if (this.gameOver) {
+            // Restart the game on screen tap after game over
+            this.restart();
+            return;
+        }
+
+        this.velocityY = -6;
+
+        // Play jump sound
+        this.jumpAudio.currentTime = 0;
+        this.jumpAudio.play();
     }
 
     detectCollision(a, b) {
